@@ -1,0 +1,45 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://d3js.org/d3.v6.js"></script>
+
+</head>
+
+<body>
+  <h3>MTG Deck Viewer by Oliver</h3>
+  <div class="flex-parent-element">
+    <div class="flex-child-input">
+      <textarea id="deck" height="300px" placeholder="Enter decklist here"></textarea>
+      <br />
+      <button id="submit" onclick="submitDeck()">Submit</button>
+      <button onclick="displayImages();">Display Deck</button>
+      <button type="button" onclick="restoreTextArea()">Clear Deck</button>
+      <br>
+      <!-- <button type="button" onclick="arrangeByCMC()">Organize by CMC</button> -->
+      <!-- <br /> -->
+      <button type="button" onclick="arrangeByType()">Arrange: Card Type</button>
+      <button type="button" onclick="arrangeByCMC()">Arrange: CMC</button>
+      <button type="button" onclick="showDataViz()">Viz</button>
+      <br />
+      <br />
+      <div class="sticky">
+        <magnify-image>Hover over a card</magnify-image>
+      </div>
+      <br />
+      <div class="decklists">
+        <decklists>Decklists here</decklists>
+      </div>
+    </div>
+    <div class="flex-child-output">
+      <output></output>
+    </div>
+  </div>
+
+  <div id="demo"></div>
+
+  <div id="my_dataviz"></div>
+  <script src="code.js"></script>
+</body>
+
+</html>
